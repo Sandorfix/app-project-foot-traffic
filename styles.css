@@ -83,5 +83,5 @@ button:hover {
 /* Apply animation to elements */
 .fade-in {
     opacity: 0; /* Start hidden */
-    animation: fadeIn 3s ease-out forwards; /* Adjust duration as needed */
+    animation: fadeIn 2s ease-out forwards; /* Adjust duration as needed */
 }
