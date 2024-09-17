@@ -1,22 +1,208 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Select Language</title>
-    <link rel="stylesheet" href="styles.css">
+    <title data-en="Get Your Code" data-es="Obtén tu Código" data-de="Holen Sie sich Ihren Code" data-fr="Obtenez Votre Code">Get Your Code</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
-<body class="fade-in">
-    <div class="container">
-        <h1>Select Your Language</h1>
-        <div class="flag-container">
-            <img src="/webapp-assets/united-kingdom.png" alt="English" class="flag" onclick="selectLanguage('en')">
-            <img src="/webapp-assets/spain.png" alt="Español" class="flag" onclick="selectLanguage('es')">
-            <img src="/webapp-assets/germany.png" alt="Deutsch" class="flag" onclick="selectLanguage('de')">
-            <img src="/webapp-assets/france.png" alt="Français" class="flag" onclick="selectLanguage('fr')">
-        </div>
-    </div>
-    <script src="script.js"></script>
-</body>
-</html>
+<body class="is-preload">
 
+    <!-- Header -->
+    <section id="header">
+        <div class="inner">
+            <span class="icon solid major fa-cloud"></span>
+            <h1 id="header-title" data-en="Hello, I'm <strong>Photon</strong>, another fine<br />freebie from <a href='http://html5up.net'>HTML5 UP</a>."
+                data-es="Hola, soy <strong>Photon</strong>, otro excelente<br />obsequio de <a href='http://html5up.net'>HTML5 UP</a>."
+                data-de="Hallo, ich bin <strong>Photon</strong>, ein weiteres tolles<br />Geschenk von <a href='http://html5up.net'>HTML5 UP</a>."
+                data-fr="Bonjour, je suis <strong>Photon</strong>, un autre excellent<br />cadeau de <a href='http://html5up.net'>HTML5 UP</a>."
+            >Hello, I'm <strong>Photon</strong>, another fine<br />freebie from <a href='http://html5up.net'>HTML5 UP</a>.</h1>
+            <p id="header-description" data-en="A little but excellent freebie from HTML5 UP.<br />Enjoy the experience with us."
+                data-es="Un pequeño pero excelente obsequio de HTML5 UP.<br />Disfruta de la experiencia con nosotros."
+                data-de="Ein kleines, aber hervorragendes Geschenk von HTML5 UP.<br />Genießen Sie das Erlebnis mit uns."
+                data-fr="Un petit mais excellent cadeau de HTML5 UP.<br />Profitez de l'expérience avec nous."
+            >A little but excellent freebie from HTML5 UP.<br />Enjoy the experience with us.</p>
+            <ul class="actions special">
+                <li><a href="#one" class="button scrolly" data-en="Discover" data-es="Descubrir" data-de="Entdecken" data-fr="Découvrir">Discover</a></li>
+                <!-- Language Dropdown -->
+                <li>
+                    <select id="language-select" onchange="changeLanguage()">
+                        <option value="en" selected>English</option>
+                        <option value="es">Español</option>
+                        <option value="de">Deutsch</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- One -->
+    <section id="one" class="main style1">
+        <div class="container">
+            <div class="row gtr-150">
+                <div class="col-6 col-12-medium">
+                    <header class="major">
+                        <h2 data-en="Example Title<br />Example Subtitle" data-es="Título de Ejemplo<br />Subtítulo de Ejemplo"
+                            data-de="Beispieltitel<br />Beispiels Untertitel" data-fr="Titre d'exemple<br />Sous-titre d'exemple">Example Title<br />Example Subtitle</h2>
+                    </header>
+                    <p data-en="Description of the main content. You can add details about the content here.<br />This section provides important information for the user."
+                        data-es="Descripción del contenido principal. Puedes agregar detalles sobre el contenido aquí.<br />Esta sección proporciona información importante para el usuario."
+                        data-de="Beschreibung des Hauptinhalts. Sie können hier Details zum Inhalt hinzufügen.<br />Dieser Abschnitt bietet wichtige Informationen für den Benutzer."
+                        data-fr="Description du contenu principal. Vous pouvez ajouter des détails sur le contenu ici.<br />Cette section fournit des informations importantes pour l'utilisateur.">
+                        Description of the main content. You can add details about the content here.<br />This section provides important information for the user.
+                    </p>
+                </div>
+                <div class="col-6 col-12-medium imp-medium">
+                    <span class="image fit"><img src="images/pic01.jpg" alt="Example Image" /></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Two -->
+    <section id="two" class="main style2">
+        <div class="container">
+            <div class="row gtr-150">
+                <div class="col-6 col-12-medium">
+                    <ul class="major-icons">
+                        <li><span class="icon solid style1 major fa-code" data-en="Code" data-es="Código" data-de="Code" data-fr="Code"></span></li>
+                        <li><span class="icon solid style2 major fa-bolt" data-en="Bolt" data-es="Rayo" data-de="Blitz" data-fr="Éclair"></span></li>
+                        <li><span class="icon solid style3 major fa-camera-retro" data-en="Camera" data-es="Cámara" data-de="Kamera" data-fr="Appareil Photo"></span></li>
+                        <li><span class="icon solid style4 major fa-cog" data-en="Cog" data-es="Engranaje" data-de="Zahnrad" data-fr="Engrenage"></span></li>
+                        <li><span class="icon solid style5 major fa-desktop" data-en="Desktop" data-es="Escritorio" data-de="Desktop" data-fr="Bureau"></span></li>
+                        <li><span class="icon solid style6 major fa-calendar" data-en="Calendar" data-es="Calendario" data-de="Kalender" data-fr="Calendrier"></span></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-12-medium">
+                    <header class="major">
+                        <h2 data-en="Another Example Title<br />Another Example Subtitle" data-es="Otro Ejemplo de Título<br />Otro Ejemplo de Subtítulo"
+                            data-de="Ein weiterer Beispieltitel<br />Ein weiterer Beispieluntertitel" data-fr="Un autre Titre d'exemple<br />Un autre Sous-titre d'exemple">Another Example Title<br />Another Example Subtitle</h2>
+                    </header>
+                    <p data-en="More details about the content. Here you can provide additional information and more details about what you offer."
+                        data-es="Más detalles sobre el contenido. Aquí puedes proporcionar información adicional y más detalles sobre lo que ofreces."
+                        data-de="Weitere Details zum Inhalt. Hier können Sie zusätzliche Informationen und weitere Details zu Ihrem Angebot bereitstellen."
+                        data-fr="Plus de détails sur le contenu. Ici, vous pouvez fournir des informations supplémentaires et plus de détails sur ce que vous proposez.">
+                        More details about the content. Here you can provide additional information and more details about what you offer.
+                    </p>
+                    <p data-en="Additional information about the services offered. You can include extensive details and explanations."
+                        data-es="Información adicional sobre los servicios ofrecidos. Puedes incluir detalles extensos y explicaciones."
+                        data-de="Zusätzliche Informationen über die angebotenen Dienste. Sie können umfassende Details und Erklärungen hinzufügen."
+                        data-fr="Informations supplémentaires sur les services proposés. Vous pouvez inclure des détails étendus et des explications.">
+                        Additional information about the services offered. You can include extensive details and explanations.
+                    </p>
+                    <p data-en="More information and descriptions to enrich the content of this section."
+                        data-es="Más información y descripciones para enriquecer el contenido de esta sección."
+                        data-de="Weitere Informationen und Beschreibungen zur Bereicherung des Inhalts dieses Abschnitts."
+                        data-fr="Plus d'informations et de descriptions pour enrichir le contenu de cette section.">
+                        More information and descriptions to enrich the content of this section.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Three -->
+    <section id="three" class="main style1 special">
+        <div class="container">
+            <header class="major">
+                <h2 data-en="More Information and Details" data-es="Más Información y Detalles"
+                    data-de="Weitere Informationen und Details" data-fr="Plus d'Informations et Détails">More Information and Details</h2>
+            </header>
+            <p data-en="Additional information about this special section. Here you can provide deeper details."
+                data-es="Información adicional sobre esta sección especial. Aquí puedes proporcionar detalles más profundos."
+                data-de="Zusätzliche Informationen zu diesem speziellen Abschnitt. Hier können Sie tiefere Details bereitstellen."
+                data-fr="Informations supplémentaires sur cette section spéciale. Vous pouvez fournir des détails plus approfondis ici.">
+                Additional information about this special section. Here you can provide deeper details.
+            </p>
+
+			<div class="row gtr-150">
+				<div class="col-4 col-12-medium">
+					<span class="image fit"><img src="images/pic02.jpg" alt="Example Image 1" /></span>
+					<h3 data-en="Example Title" data-es="Título de Ejemplo" data-de="Beispieltitel" data-fr="Titre d'exemple">Example Title</h3>
+					<p data-en="Brief description about the first item in this section. Here you can include relevant information."
+						data-es="Descripción breve sobre el primer ítem en esta sección. Aquí puedes incluir información relevante."
+						data-de="Kurze Beschreibung des ersten Artikels in diesem Abschnitt. Hier können Sie relevante Informationen einfügen."
+						data-fr="Description brève du premier élément de cette section. Ici, vous pouvez inclure des informations pertinentes.">
+						Brief description about the first item in this section. Here you can include relevant information.
+					</p>
+					<ul class="actions special">
+						<li><a href="#" class="button" data-en="More" data-es="Más" data-de="Mehr" data-fr="Plus">More</a></li>
+					</ul>
+				</div>
+				<div class="col-4 col-12-medium">
+					<span class="image fit"><img src="images/pic03.jpg" alt="Example Image 2" /></span>
+					<h3 data-en="Example Title" data-es="Título de Ejemplo" data-de="Beispieltitel" data-fr="Titre d'exemple">Example Title</h3>
+					<p data-en="Brief description about the second item in this section. Here you can include relevant information."
+						data-es="Descripción breve sobre el segundo ítem en esta sección. Aquí puedes incluir información relevante."
+						data-de="Kurze Beschreibung des zweiten Artikels in diesem Abschnitt. Hier können Sie relevante Informationen einfügen."
+						data-fr="Description brève du deuxième élément de cette section. Ici, vous pouvez inclure des informations pertinentes.">
+						Brief description about the second item in this section. Here you can include relevant information.
+					</p>
+					<ul class="actions special">
+						<li><a href="#" class="button" data-en="More" data-es="Más" data-de="Mehr" data-fr="Plus">More</a></li>
+					</ul>
+				</div>
+				<div class="col-4 col-12-medium">
+					<span class="image fit"><img src="images/pic04.jpg" alt="Example Image 3" /></span>
+					<h3 data-en="Example Title" data-es="Título de Ejemplo" data-de="Beispieltitel" data-fr="Titre d'exemple">Example Title</h3>
+					<p data-en="Brief description about the third item in this section. Here you can include relevant information."
+						data-es="Descripción breve sobre el tercer ítem en esta sección. Aquí puedes incluir información relevante."
+						data-de="Kurze Beschreibung des dritten Artikels in diesem Abschnitt. Hier können Sie relevante Informationen einfügen."
+						data-fr="Description brève du troisième élément de cette section. Ici, vous pouvez inclure des informations pertinentes.">
+						Brief description about the third item in this section. Here you can include relevant information.
+					</p>
+					<ul class="actions special">
+						<li><a href="#" class="button" data-en="More" data-es="Más" data-de="Mehr" data-fr="Plus">More</a></li>
+					</ul>
+				</div>
+			</div>
+			</div>
+			</section>
+			
+			<!-- Four -->
+			<section id="four" class="main style2 special">
+				<div class="container">
+					<header class="major">
+						<h2 data-en="Interested in More?" data-es="¿Interesado en Más?" data-de="Interessiert an Mehr?" data-fr="Intéressé par Plus?">Interested in More?</h2>
+					</header>
+					<p data-en="If you are interested in more information or want to sign up, you can do so here."
+						data-es="Si estás interesado en más información o deseas registrarte, puedes hacerlo aquí."
+						data-de="Wenn Sie an weiteren Informationen interessiert sind oder sich anmelden möchten, können Sie dies hier tun."
+						data-fr="Si vous êtes intéressé par plus d'informations ou souhaitez vous inscrire, vous pouvez le faire ici.">
+						If you are interested in more information or want to sign up, you can do so here.
+					</p>
+					<ul class="actions special">
+						<li><a href="#" class="button wide primary" data-en="Sign Up" data-es="Regístrate" data-de="Anmelden" data-fr="S'inscrire">Sign Up</a></li>
+						<li><a href="#" class="button wide" data-en="Learn More" data-es="Más Información" data-de="Mehr Erfahren" data-fr="En Savoir Plus">Learn More</a></li>
+					</ul>
+				</div>
+			</section>
+			
+			<!-- Footer -->
+			<section id="footer">
+				<ul class="icons">
+					<li><a href="#" class="icon brands alt fa-twitter" data-en="Twitter" data-es="Twitter" data-de="Twitter" data-fr="Twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands alt fa-facebook-f" data-en="Facebook" data-es="Facebook" data-de="Facebook" data-fr="Facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon brands alt fa-instagram" data-en="Instagram" data-es="Instagram" data-de="Instagram" data-fr="Instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon brands alt fa-github" data-en="GitHub" data-es="GitHub" data-de="GitHub" data-fr="GitHub"><span class="label">GitHub</span></a></li>
+					<li><a href="#" class="icon solid alt fa-envelope" data-en="Email" data-es="Correo Electrónico" data-de="E-Mail" data-fr="Email"><span class="label">Email</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li data-en="&copy; Untitled" data-es="&copy; Sin Título" data-de="&copy; Unbetitelt" data-fr="&copy; Sans Titre">&copy; Untitled</li>
+					<li data-en="Design: <a href='http://html5up.net'>HTML5 UP</a>" data-es="Diseño: <a href='http://html5up.net'>HTML5 UP</a>" data-de="Design: <a href='http://html5up.net'>HTML5 UP</a>" data-fr="Design: <a href='http://html5up.net'>HTML5 UP</a>">Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</section>
+			
+			<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			
+			</body>
+			</html>
+				
