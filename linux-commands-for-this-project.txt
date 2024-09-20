@@ -1,0 +1,3 @@
+***This will sync files from /var/www/html/ to /home/pi3/app-project-foot-trafic/, while excluding the .git directory***
+
+rsync -avz --exclude '.git' /var/www/html/ /home/pi3/app-project-foot-trafic/
