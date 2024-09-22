@@ -3575,3 +3575,23 @@ input, select, textarea {
 	#header .actions li {
 		padding-left: 0;
 	}
+
+
+    /* Styles for logo */
+@keyframes enhanced-pulse {
+    0%, 100% { transform: scale(1); filter: brightness(100%); }
+    50% { transform: scale(1.05); filter: brightness(110%); }
+}
+
+.my-logo {
+    width: 250px;
+    height: auto;
+    display: block;
+    margin: 0 auto 30px;
+    transition: all 0.3s ease;
+    animation: enhanced-pulse 3s infinite ease-in-out;
+    filter: drop-shadow(0 0 3px rgba(255, 165, 0, 0.3));
+}
+
+
+
