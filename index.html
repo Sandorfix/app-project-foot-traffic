@@ -10,6 +10,7 @@
     <noscript>
         <link rel="stylesheet" href="assets/css/noscript.css" />
     </noscript>
+    <link rel="icon" href="/images/mj-favicon.png" type="image/png">
 
     <!-- Below these style should go in the main.css file not here -->
 
@@ -17,16 +18,6 @@
 </head>
 
 <body class="is-preload">
-
-    <!-- Add this SVG element to your HTML, just after the opening <body> tag -->
-    <svg width="0" height="0">
-        <defs>
-            <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#ffffff" />
-                <stop offset="100%" stop-color="#e0e0e0" />
-            </linearGradient>
-        </defs>
-    </svg>
 
     <!-- Header -->
     <section id="header">
@@ -66,27 +57,16 @@
         </div>
     </section>
 
-    <!-- One -->
-    <section id="one" class="main style1">
+    <!-- Carousel Section -->
+    <section id="carousel" class="main style1">
         <div class="container">
-            <div class="row gtr-150">
-                <div class="col-6 col-12-medium">
-                    <header class="major">
-                        <h2 data-en="Example Title<br />Example Subtitle"
-                            data-es="Título de Ejemplo<br />Subtítulo de Ejemplo"
-                            data-de="Beispieltitel<br />Beispiels Untertitel"
-                            data-fr="Titre d'exemple<br />Sous-titre d'exemple">Example Title<br />Example Subtitle</h2>
-                    </header>
-                    <p data-en="Description of the main content. You can add details about the content here.<br />This section provides important information for the user."
-                        data-es="Descripción del contenido principal. Puedes agregar detalles sobre el contenido aquí.<br />Esta sección proporciona información importante para el usuario."
-                        data-de="Beschreibung des Hauptinhalts. Sie können hier Details zum Inhalt hinzufügen.<br />Dieser Abschnitt bietet wichtige Informationen für den Benutzer."
-                        data-fr="Description du contenu principal. Vous pouvez ajouter des détails sur le contenu ici.<br />Cette section fournit des informations importantes pour l'utilisateur.">
-                        Description of the main content. You can add details about the content here.<br />This section
-                        provides important information for the user.
-                    </p>
-                </div>
-                <div class="col-6 col-12-medium imp-medium">
-                    <span class="image fit"><img src="images/pic01.jpg" alt="Example Image" /></span>
+            <div class="carousel">
+                <div class="slides">
+                    <img src="images/bus-tour.webp" alt="Example Image 1">
+                    <img src="images/catamaran-tour.webp" alt="Example Image 2">
+                    <img src="images/forest-hike.webp" alt="Example Image 3">
+                    <!-- Duplicate the first image for circular effect -->
+                    <img src="images/bus-tour.webp" alt="Example Image 1">
                 </div>
             </div>
         </div>
@@ -272,13 +252,13 @@
         <ul class="copyright">
             <li data-en="&#169; Foot-Traffic-App" data-es="&#169; Foot-Traffic-App" data-de="&#169; Foot-Traffic-App"
                 data-fr="&#169; Foot-Traffic-App">&#169; Foot-Traffic-App</li>
-                <li data-en="Design: <span>HTML5 UP</span> - Licensed under <span>CC BY 3.0</span>"
-                    data-es="Diseño: <span>HTML5 UP</span> - Licencia bajo <span>CC BY 3.0</span>"
-                    data-de="Design: <span>HTML5 UP</span> - Lizenziert unter <span>CC BY 3.0</span>"
-                    data-fr="Design : <span>HTML5 UP</span> - Sous licence <span>CC BY 3.0</span>">
-                    Design: <span>HTML5 UP</span>. Licensed under <span>CC BY 3.0</span>
-                </li>
-                
+            <li data-en="Design: <span>HTML5 UP</span> - Licensed under <span>CC BY 3.0</span>"
+                data-es="Diseño: <span>HTML5 UP</span> - Licencia bajo <span>CC BY 3.0</span>"
+                data-de="Design: <span>HTML5 UP</span> - Lizenziert unter <span>CC BY 3.0</span>"
+                data-fr="Design : <span>HTML5 UP</span> - Sous licence <span>CC BY 3.0</span>">
+                Design: <span>HTML5 UP</span>. Licensed under <span>CC BY 3.0</span>
+            </li>
+
 
         </ul>
 

@@ -59,3 +59,32 @@ document.addEventListener('DOMContentLoaded', () => {
     // Scrolly.
     $('.scrolly').scrolly();
 })(jQuery);
+
+
+// Carousel section
+let currentSlide = 0;
+
+function moveSlide() {
+    const slides = document.querySelector('.slides');
+    const totalSlides = slides.children.length;
+
+    currentSlide++;
+
+    // Reset to the first slide if at the end
+    if (currentSlide >= totalSlides) {
+        currentSlide = 1; // Skip the duplicate
+        slides.style.transition = 'none'; // Disable transition
+        slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+        setTimeout(() => {
+            slides.style.transition = 'transform 0.5s ease'; // Re-enable transition
+            currentSlide++;
+        }, 50);
+    }
+
+    const offset = -currentSlide * 100;
+    slides.style.transform = `translateX(${offset}%)`;
+}
+
+// Change slide every 3 seconds
+setInterval(moveSlide, 4000);
