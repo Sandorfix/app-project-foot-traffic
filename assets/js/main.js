@@ -95,3 +95,4 @@ document.addEventListener('DOMContentLoaded', function() {
     // Advance slide every 3 seconds
     setInterval(nextSlide, 3000);
 });
+
