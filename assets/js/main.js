@@ -62,29 +62,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // Carousel section
-let currentSlide = 0;
+document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.querySelector('.carousel');
+    const slides = carousel.querySelector('.slides');
+    const images = slides.querySelectorAll('img');
+    
+    // Duplicate images for seamless looping
+    images.forEach(img => {
+        const clone = img.cloneNode(true);
+        slides.appendChild(clone);
+    });
 
-function moveSlide() {
-    const slides = document.querySelector('.slides');
-    const totalSlides = slides.children.length;
+    let currentIndex = 0;
+    const totalImages = slides.children.length;
+    const imageWidth = carousel.clientWidth;
 
-    currentSlide++;
+    function nextSlide() {
+        currentIndex++;
+        slides.style.transition = 'transform 0.5s ease';
+        slides.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
 
-    // Reset to the first slide if at the end
-    if (currentSlide >= totalSlides) {
-        currentSlide = 1; // Skip the duplicate
-        slides.style.transition = 'none'; // Disable transition
-        slides.style.transform = `translateX(-${currentSlide * 100}%)`;
-
-        setTimeout(() => {
-            slides.style.transition = 'transform 0.5s ease'; // Re-enable transition
-            currentSlide++;
-        }, 50);
+        // If we've reached the cloned set, quickly reset to the start without transition
+        if (currentIndex === totalImages / 2) {
+            setTimeout(() => {
+                slides.style.transition = 'none';
+                currentIndex = 0;
+                slides.style.transform = `translateX(0)`;
+            }, 500);
+        }
     }
 
-    const offset = -currentSlide * 100;
-    slides.style.transform = `translateX(${offset}%)`;
-}
-
-// Change slide every 3 seconds
-setInterval(moveSlide, 4000);
+    // Advance slide every 3 seconds
+    setInterval(nextSlide, 3000);
+});
