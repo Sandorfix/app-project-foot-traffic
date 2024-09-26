@@ -3688,3 +3688,8 @@ input, select, textarea {
         margin-bottom: 4px; /* Space below the comment for mobile */
     }
 }
+
+.p-tag-bigger {
+	font-weight: 400;
+	line-height: 1.5;
+}
