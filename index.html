@@ -1,11 +1,11 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 
 <head>
     <title data-en="Get Your Code" data-es="Obtén tu Código" data-de="Holen Sie sich Ihren Code"
         data-fr="Obtenez Votre Code" data-it="Ottieni il tuo Codice">Get Your Code</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript>
         <link rel="stylesheet" href="assets/css/noscript.css" />
@@ -18,7 +18,7 @@
     <!-- Header -->
     <section id="header">
         <div class="inner">
-            <img src="images/mj-logo-transparent.svg" alt="Logo" class="my-logo path">
+            <img src="images/mj-logo-transparent.svg" alt="Maykel Jackson Logo" class="my-logo path">
             <h1 id="header-title"
                 data-en="Hello, I'm &lt;strong&gt;MJ&lt;/strong&gt;. Welcome to&lt;br /&gt; the start of my new project."
                 data-es="Hola, soy &lt;strong&gt;MJ&lt;/strong&gt;, Bienvenido al comienzo &lt;br /&gt;de mi nuevo proyecto."
@@ -30,17 +30,19 @@
 
 
             <p id="header-description"
-                data-en="A small but excellent creation from MJ, crafted with care.<br />Enjoy the journey with me."
-                data-es="Una pequeña pero excelente creación de MJ, hecha con cuidado.<br />Disfruta del viaje conmigo."
-                data-de="Eine kleine, aber ausgezeichnete Kreation von MJ, sorgfältig gemacht.<br />Genießen Sie die Reise mit mir."
-                data-fr="Une petite mais excellente création de MJ, réalisée avec soin.<br />Profitez du voyage avec moi."
-                data-it="Una piccola ma eccellente creazione di MJ, realizzata con cura.<br />Goditi il viaggio con me!">
+                data-en="A small but excellent creation from MJ, crafted with care.&lt;br /&gt;Enjoy the journey with me."
+                data-es="Una pequeña pero excelente creación de MJ, hecha con cuidado.&lt;br /&gt;Disfruta del viaje conmigo."
+                data-de="Eine kleine, aber ausgezeichnete Kreation von MJ, sorgfältig gemacht.&lt;br /&gt;Genießen Sie die Reise mit mir."
+                data-fr="Une petite mais excellente création de MJ, réalisée avec soin.&lt;br /&gt;Profitez du voyage avec moi."
+                data-it="Una piccola ma eccellente creazione di MJ, realizzata con cura.&lt;br /&gt;Goditi il viaggio con me!">
                 A small but excellent creation from Sandor, crafted with care.<br />Enjoy the journey with me!
             </p>
 
 
+
             <ul class="actions special">
                 <li>
+                    <label id="language-label" for="language-select">Choose your language:</label>
                     <select id="language-select" onchange="changeLanguage()">
                         <option value="en" selected>English</option>
                         <option value="es">Español</option>
@@ -49,6 +51,8 @@
                         <option value="it">Italiano</option>
                     </select>
                 </li>
+                
+                
                 <li><a href="#carousel" class="button scrolly" data-en="Discover" data-es="Descubrir"
                         data-de="Entdecken" data-fr="Découvrir" data-it="Scoprire">Discover</a></li>
             </ul>
@@ -60,11 +64,14 @@
         <div class="container">
             <div class="carousel">
                 <div class="slides">
-                    <img src="images/loro-siam.jpg" alt="Example Image 1">
-                    <img src="images/catamaran-tour.webp" alt="Example Image 2">
-                    <img src="images/forest-hike.webp" alt="Example Image 3">
-                    <img src="images/bus-tour.webp" alt="Example Image 4">
+                    <img src="images/loro-siam.jpg" alt="A vibrant display of exotic birds at Loro Siam">
+                    <img src="images/catamaran-tour.webp" alt="Tourists enjoying a catamaran tour on clear blue waters">
+                    <img src="images/forest-hike.webp"
+                        alt="Hikers exploring a lush forest trail surrounded by greenery">
+                    <img src="images/bus-tour.webp"
+                        alt="A scenic view of a bus tour with travelers on a picturesque route">
                 </div>
+
             </div>
         </div>
     </section>
@@ -87,22 +94,31 @@
             <div class="row gtr-150">
                 <div class="col-6 col-12-medium">
                     <ul class="major-icons">
-                        <li><span class="icon solid style1 major fas fa-info"></span></li>
-                        <li><span class="icon solid style2 major fas fa-hiking"></span></li>
-                        <li><span class="icon solid style3 major fas fa-bus"></span></li>
-                        <li><span class="icon solid style4 major fas fa-ship"></span></li>
-                        <li><span class="icon solid style5 major fas fa-mountain"></span></li>
-                        <li><span class="icon solid style6 major fas fa-ticket-alt"></span></li>
+                        <li><span class="icon solid style1 major fas fa-info" aria-label="Information Icon"
+                                role="img"></span></li>
+                        <li><span class="icon solid style2 major fas fa-hiking" aria-label="Hiking Icon"
+                                role="img"></span></li>
+                        <li><span class="icon solid style3 major fas fa-bus" aria-label="Bus Icon" role="img"></span>
+                        </li>
+                        <li><span class="icon solid style4 major fas fa-ship" aria-label="Ship Icon" role="img"></span>
+                        </li>
+                        <li><span class="icon solid style5 major fas fa-mountain" aria-label="Mountain Icon"
+                                role="img"></span></li>
+                        <li><span class="icon solid style6 major fas fa-ticket-alt" aria-label="Ticket Icon"
+                                role="img"></span></li>
                     </ul>
+
                 </div>
                 <div class="col-6 col-12-medium">
                     <header class="major">
-                        <h2 data-en="Explore Our Exciting Tours!<br /> Choose Your Adventure"
-                            data-es="¡Explora Nuestras Emocionantes Excursiones!<br /> Elige Tu Aventura"
-                            data-de="Entdecken Sie unsere aufregenden Touren!<br /> Wählen Sie Ihr Abenteuer"
-                            data-fr="Explorez Nos Excursions Passionnantes !<br /> Choisissez Votre Aventure"
-                            data-it="Esplora i Nostri Tour Entusiasmanti!<br />Scegli la Tua Avventura">Explore Our
-                            Exciting Tours!<br />Choose Your Adventure</h2>
+                        <h2 data-en="Explore Our Exciting Tours!&lt;br /&gt; Choose Your Adventure"
+                            data-es="¡Explora Nuestras Emocionantes Excursiones!&lt;br /&gt; Elige Tu Aventura"
+                            data-de="Entdecken Sie unsere aufregenden Touren!&lt;br /&gt; Wählen Sie Ihr Abenteuer"
+                            data-fr="Explorez Nos Excursions Passionnantes !&lt;br /&gt; Choisissez Votre Aventure"
+                            data-it="Esplora i Nostri Tour Entusiasmanti!&lt;br /&gt;Scegli la Tua Avventura">
+                            Explore Our Exciting Tours!&lt;br /&gt;Choose Your Adventure
+                        </h2>
+
                     </header>
                     <p data-en="Discover a variety of tours designed to cater to every traveler’s interests. From breathtaking scenic excursions to thrilling adventures, we have something for everyone."
                         data-es="Descubre una variedad de excursiones diseñadas para satisfacer los intereses de cada viajero. Desde impresionantes excursiones escénicas hasta emocionantes aventuras, tenemos algo para todos."
@@ -159,12 +175,13 @@
                             data-es="Comentarios de Google Reviews." data-de="Kommentare von Google Bewertungen."
                             data-fr="Commentaires de Google Reviews." data-it="Commenti da Google Reviews.">
                         </p>
-                        <p data-en="&ldquo;Just went and got some tickets from an extremely enthusiastic and friendly advisor, <strong>Maykel Jackson</strong>. He genuinely wanted us to have a good time and was non-pushy for a sale. He gave us lots of tips for our general stay and also explained how to get the most out of our time with the tickets he provided.&rdquo;"
-                            data-es="&ldquo;Acabamos de conseguir unas entradas de un asesor extremadamente entusiasta y amigable, <strong>Maykel Jackson</strong>. Realmente quería que pasáramos un buen rato y no fue insistente con la venta. Nos dio muchos consejos para nuestra estadía en general y también nos explicó cómo aprovechar al máximo nuestro tiempo con las entradas que nos proporcionó.&rdquo;"
-                            data-de="&ldquo;Wir haben gerade Tickets von einem äußerst begeisterten und freundlichen Berater, <strong>Maykel Jackson</strong>, erhalten. Er wollte wirklich, dass wir eine gute Zeit haben, und war nicht aufdringlich. Er gab uns viele Tipps für unseren Aufenthalt und erklärte, wie wir das Beste aus unserer Zeit mit den Tickets machen können, die er uns gegeben hat.&rdquo;"
-                            data-fr="&ldquo;Nous venons de recevoir des billets d'un conseiller extrêmement enthousiaste et amical, <strong>Maykel Jackson</strong>. Il voulait vraiment que nous passions un bon moment et n'a pas insisté pour vendre. Il nous a donné de nombreux conseils pour notre séjour et a également expliqué comment tirer le meilleur parti de notre temps avec les billets qu'il nous a fournis.&rdquo;"
-                            data-it="&ldquo;Abbiamo appena preso dei biglietti da un consulente estremamente entusiasta e cordiale, <strong>Maykel Jackson</strong>. Voleva davvero che ci divertissimo e non ci ha mai spinti a comprare. Ci ha dato molti consigli per il nostro soggiorno in generale e ci ha anche spiegato come sfruttare al meglio il nostro tempo con i biglietti che ci ha fornito.&rdquo;">
+                        <p data-en="&ldquo;Just went and got some tickets from an extremely enthusiastic and friendly advisor, &lt;strong&gt;Maykel Jackson&lt;/strong&gt;. He genuinely wanted us to have a good time and was non-pushy for a sale. He gave us lots of tips for our general stay and also explained how to get the most out of our time with the tickets he provided.&rdquo;"
+                            data-es="&ldquo;Acabamos de conseguir unas entradas de un asesor extremadamente entusiasta y amigable, &lt;strong&gt;Maykel Jackson&lt;/strong&gt;. Realmente quería que pasáramos un buen rato y no fue insistente con la venta. Nos dio muchos consejos para nuestra estadía en general y también nos explicó cómo aprovechar al máximo nuestro tiempo con las entradas que nos proporcionó.&rdquo;"
+                            data-de="&ldquo;Wir haben gerade Tickets von einem äußerst begeisterten und freundlichen Berater, &lt;strong&gt;Maykel Jackson&lt;/strong&gt;, erhalten. Er wollte wirklich, dass wir eine gute Zeit haben, und war nicht aufdringlich. Er gab uns viele Tipps für unseren Aufenthalt und erklärte, wie wir das Beste aus unserer Zeit mit den Tickets machen können, die er uns gegeben hat.&rdquo;"
+                            data-fr="&ldquo;Nous venons de recevoir des billets d'un conseiller extrêmement enthousiaste et amical, &lt;strong&gt;Maykel Jackson&lt;/strong&gt;. Il voulait vraiment que nous passions un bon moment et n'a pas insisté pour vendre. Il nous a donné de nombreux conseils pour notre séjour et a également expliqué comment tirer le meilleur parti de notre temps avec les billets qu'il nous a fournis.&rdquo;"
+                            data-it="&ldquo;Abbiamo appena preso dei biglietti da un consulente estremamente entusiasta e cordiale, &lt;strong&gt;Maykel Jackson&lt;/strong&gt;. Voleva davvero che ci divertissimo e non ci ha mai spinti a comprare. Ci ha dato molti consigli per il nostro soggiorno in generale e ci ha anche spiegato come sfruttare al meglio il nostro tempo con i biglietti che ci ha fornito.&rdquo;">
                         </p>
+
                     </div>
                 </div>
                 <div class="col-4 col-12-medium">
@@ -177,12 +194,13 @@
                             data-es="Comentarios de Google Reviews." data-de="Kommentare von Google Bewertungen."
                             data-fr="Commentaires de Google Reviews." data-it="Commenti da Google Reviews.">
                         </p>
-                        <p data-en="&ldquo;Amazing service! Many different excursion options. The man who recommended me and my five other friends, whose name is <strong>Maykel Jackson</strong>, was so friendly and welcoming and helped us organize a boat trip. Highly recommend this service!&rdquo;"
-                            data-es="&ldquo;¡Servicio increíble! Muchas opciones de excursión. El hombre que nos recomendó a mí y a mis cinco amigos, cuyo nombre es <strong>Maykel Jackson</strong>, fue muy amable y acogedor, y nos ayudó a organizar un viaje en barco. ¡Recomiendo mucho este servicio!&rdquo;"
-                            data-de="&ldquo;Fantastischer Service! Viele verschiedene Ausflugsmöglichkeiten. Der Mann, der mir und meinen fünf anderen Freunden empfohlen wurde, <strong>Maykel Jackson</strong>, war so freundlich und einladend und half uns, einen Bootsausflug zu organisieren. Ich kann diesen Service sehr empfehlen!&rdquo;"
-                            data-fr="&ldquo;Service incroyable! De nombreuses options d'excursions. L'homme qui m'a recommandé, ainsi qu'à mes cinq autres amis, nommé <strong>Maykel Jackson</strong>, était si sympathique et accueillant et nous a aidés à organiser une excursion en bateau. Je recommande vivement ce service!&rdquo;"
-                            data-it="&ldquo;Servizio straordinario! Molte opzioni di escursione. L'uomo che ha consigliato me e i miei cinque amici, di nome <strong>Maykel Jackson</strong>, è stato così cordiale e accogliente e ci ha aiutato a organizzare un'escursione in barca. Consiglio vivamente questo servizio!&rdquo;">
+                        <p data-en="&ldquo;Amazing service! Many different excursion options. The man who recommended me and my five other friends, whose name is &lt;strong&gt;Maykel Jackson&lt;/strong&gt;, was so friendly and welcoming and helped us organize a boat trip. Highly recommend this service!&rdquo;"
+                            data-es="&ldquo;¡Servicio increíble! Muchas opciones de excursión. El hombre que nos recomendó a mí y a mis cinco amigos, cuyo nombre es &lt;strong&gt;Maykel Jackson&lt;/strong&gt;, fue muy amable y acogedor, y nos ayudó a organizar un viaje en barco. ¡Recomiendo mucho este servicio!&rdquo;"
+                            data-de="&ldquo;Fantastischer Service! Viele verschiedene Ausflugsmöglichkeiten. Der Mann, der mir und meinen fünf anderen Freunden empfohlen wurde, &lt;strong&gt;Maykel Jackson&lt;/strong&gt;, war so freundlich und einladend und half uns, einen Bootsausflug zu organisieren. Ich kann diesen Service sehr empfehlen!&rdquo;"
+                            data-fr="&ldquo;Service incroyable! De nombreuses options d'excursions. L'homme qui m'a recommandé, ainsi qu'à mes cinq autres amis, nommé &lt;strong&gt;Maykel Jackson&lt;/strong&gt;, était si sympathique et accueillant et nous a aidés à organiser une excursion en bateau. Je recommande vivement ce service!&rdquo;"
+                            data-it="&ldquo;Servizio straordinario! Molte opzioni di escursione. L'uomo che ha consigliato me e i miei cinque amici, di nome &lt;strong&gt;Maykel Jackson&lt;/strong&gt;, è stato così cordiale e accogliente e ci ha aiutato a organizzare un'escursione in barca. Consiglio vivamente questo servizio!&rdquo;">
                         </p>
+
                     </div>
                 </div>
                 <div class="col-4 col-12-medium">
@@ -222,37 +240,12 @@
             <div class="map-container">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.0746096228545!2d-16.5519092240496!3d28.417005493834523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc6a7f92e3054e99%3A0xa01e53a02624b6f3!2sC.%20Quintana%2C%207%2C%2038400%20Puerto%20de%20la%20Cruz%2C%20Santa%20Cruz%20de%20Tenerife!5e0!3m2!1sen!2ses!4v1726872309904!5m2!1sen!2ses"
-                    width="100%" height="300" style="border:0; margin-bottom: 20px;" allowfullscreen="" loading="lazy">
+                    width="100%" height="300" style="border:0; margin-bottom: 20px;" allowfullscreen="" loading="lazy"
+                    aria-label="Map showing the location at C. Quintana, 7, 38400 Puerto de la Cruz, Santa Cruz de Tenerife">
                 </iframe>
             </div>
         </div>
     </section>
-
-    <!-- Generate Code Section 
-    <section id="code" class="main style1 special">
-        <div class="container">
-            <header class="major">
-                <h2>Generate Your Unique Code</h2>
-            </header>
-            <p>
-                <b>This section is dedicated to the code generation process, where users can easily create their own
-                    unique codes for special offers and promotions. Simply click the button below to get started!</b>
-            </p>
-
-            <div class="row gtr-150">
-                <div class="col-12">
-                    <ul class="actions special">
-                        <li><a href="#code" class="button wide primary" data-en="Generate Code" data-es="Generar Código"
-                                data-de="Code Generieren" data-fr="Générer le Code" data-it="Genera Codice">Generate
-                                Code</a></li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-    </section>
--->
-
 
     <!-- Four -->
     <section id="four" class="main style2 special">

@@ -4,11 +4,16 @@
     Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+// Store the selected language globally
+let selectedLanguage = 'en'; // Default language
+
 // Function to change the language
 function changeLanguage() {
-    const language = document.getElementById('language-select').value;
-    localStorage.setItem('selectedLanguage', language);
-    updateContent(language);
+    const select = document.getElementById('language-select');
+    selectedLanguage = select.value; // Get the selected language
+    localStorage.setItem('selectedLanguage', selectedLanguage); // Store in localStorage
+    updateContent(selectedLanguage); // Update the content
+    updateLanguageLabel(selectedLanguage); // Update the label text
 }
 
 // Function to update content based on selected language
@@ -24,15 +29,42 @@ function updateContent(language) {
     });
 
     // Update the page title
-    document.title = document.querySelector('title').getAttribute('data-' + language);
+    const titleElement = document.querySelector('title');
+    document.title = titleElement.getAttribute('data-' + language) || 'Default Title'; // Use a default title if needed
+}
+
+// Function to update the language label
+function updateLanguageLabel(language) {
+    const languageLabel = document.getElementById('language-label');
+    switch (language) {
+        case 'en':
+            languageLabel.textContent = 'Choose your language:';
+            break;
+        case 'es':
+            languageLabel.textContent = 'Elige tu idioma:';
+            break;
+        case 'de':
+            languageLabel.textContent = 'Wählen Sie Ihre Sprache:';
+            break;
+        case 'fr':
+            languageLabel.textContent = 'Choisissez votre langue:';
+            break;
+        case 'it':
+            languageLabel.textContent = 'Scegli la tua lingua:';
+            break;
+        default:
+            languageLabel.textContent = 'Choose your language:';
+    }
 }
 
 // Load the selected language from local storage on page load
 document.addEventListener('DOMContentLoaded', () => {
     const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
     document.getElementById('language-select').value = savedLanguage;
-    updateContent(savedLanguage);
+    updateContent(savedLanguage); // Initialize content based on saved language
+    updateLanguageLabel(savedLanguage); // Initialize label based on saved language
 });
+
 
 // Original Photon script
 (function ($) {
@@ -59,7 +91,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Scrolly.
     $('.scrolly').scrolly();
 })(jQuery);
-
 
 // Carousel section
 document.addEventListener('DOMContentLoaded', function () {
@@ -95,7 +126,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // Advance slide every 4 seconds
     setInterval(nextSlide, 4000);
 });
-
 
 // Images for larger screens 
 document.addEventListener('DOMContentLoaded', () => {
@@ -157,7 +187,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
 //************** Generate code feature ***************
 
 const messages = {
@@ -167,14 +196,6 @@ const messages = {
     fr: "Veuillez prendre une capture d'écran de ce code.",
     it: "Per favore, fai uno screenshot di questo codice."
 };
-
-let selectedLanguage = 'en'; // Default language
-
-// Function to change the selected language
-function changeLanguage() {
-    const select = document.getElementById('language-select');
-    selectedLanguage = select.value; // Get the selected language
-}
 
 // Function to generate random code
 function generateCode() {
