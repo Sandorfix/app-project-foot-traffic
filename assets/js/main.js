@@ -1,7 +1,7 @@
 /*
-	Photon by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+    Photon by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
 // Function to change the language
@@ -35,23 +35,23 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Original Photon script
-(function($) {
+(function ($) {
     var $window = $(window),
         $body = $('body');
 
     // Breakpoints.
     breakpoints({
-        xlarge:   [ '1141px',  '1680px' ],
-        large:    [ '981px',   '1140px' ],
-        medium:   [ '737px',   '980px'  ],
-        small:    [ '481px',   '736px'  ],
-        xsmall:   [ '321px',   '480px'  ],
-        xxsmall:  [ null,      '320px'  ]
+        xlarge: ['1141px', '1680px'],
+        large: ['981px', '1140px'],
+        medium: ['737px', '980px'],
+        small: ['481px', '736px'],
+        xsmall: ['321px', '480px'],
+        xxsmall: [null, '320px']
     });
 
     // Play initial animations on page load.
-    $window.on('load', function() {
-        window.setTimeout(function() {
+    $window.on('load', function () {
+        window.setTimeout(function () {
             $body.removeClass('is-preload');
         }, 100);
     });
@@ -62,11 +62,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // Carousel section
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const carousel = document.querySelector('.carousel');
     const slides = carousel.querySelector('.slides');
     const images = slides.querySelectorAll('img');
-    
+
     // Duplicate images for seamless looping
     images.forEach(img => {
         const clone = img.cloneNode(true);
@@ -92,7 +92,118 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Advance slide every 3 seconds
-    setInterval(nextSlide, 3000);
+    // Advance slide every 4 seconds
+    setInterval(nextSlide, 4000);
 });
 
+
+// Images for larger screens 
+document.addEventListener('DOMContentLoaded', () => {
+    let currentIndex = 0;
+    const images = document.querySelectorAll('#image-slider .slider img');
+    const totalImages = images.length;
+    let intervalId;
+
+    function showImage(index) {
+        images[currentIndex].classList.remove('active');
+        currentIndex = index;
+        images[currentIndex].classList.add('active');
+    }
+
+    function showNextImage() {
+        showImage((currentIndex + 1) % totalImages);
+    }
+
+    function showPrevImage() {
+        showImage((currentIndex - 1 + totalImages) % totalImages);
+    }
+
+    function startSlideshow() {
+        if (intervalId) clearInterval(intervalId);
+        intervalId = setInterval(showNextImage, 3000);
+    }
+
+    function stopSlideshow() {
+        if (intervalId) {
+            clearInterval(intervalId);
+            intervalId = null;
+        }
+    }
+
+    // Initialize the first image
+    showImage(0);
+
+    // Start the slideshow
+    startSlideshow();
+
+    // Optional: Add event listeners for user interaction
+    const slider = document.querySelector('#image-slider');
+
+    slider.addEventListener('mouseenter', stopSlideshow);
+    slider.addEventListener('mouseleave', startSlideshow);
+
+    slider.addEventListener('click', (e) => {
+        const sliderRect = slider.getBoundingClientRect();
+        const clickX = e.clientX - sliderRect.left;
+
+        if (clickX < sliderRect.width / 2) {
+            showPrevImage();
+        } else {
+            showNextImage();
+        }
+
+        // Restart the slideshow after user interaction
+        startSlideshow();
+    });
+});
+
+
+//************** Generate code feature ***************
+
+const messages = {
+    en: "Please take a screenshot of this code.",
+    es: "Por favor, toma una captura de pantalla de este código.",
+    de: "Bitte machen Sie einen Screenshot dieses Codes.",
+    fr: "Veuillez prendre une capture d'écran de ce code.",
+    it: "Per favore, fai uno screenshot di questo codice."
+};
+
+let selectedLanguage = 'en'; // Default language
+
+// Function to change the selected language
+function changeLanguage() {
+    const select = document.getElementById('language-select');
+    selectedLanguage = select.value; // Get the selected language
+}
+
+// Function to generate random code
+function generateCode() {
+    const code = 'Jackson ' + Math.floor(100 + Math.random() * 900);
+    const codeModal = document.getElementById('codeModal');
+    const codeDisplay = document.getElementById('generatedCode');
+    const instructionDisplay = document.getElementById('screenshotInstruction');
+
+    // Display generated code
+    codeDisplay.innerHTML = `${code}`;
+
+    // Set instruction message based on the selected language
+    instructionDisplay.innerHTML = messages[selectedLanguage]; 
+
+    // Show the modal
+    codeModal.style.display = 'block';
+
+    // Close the modal after 10 seconds (10000 milliseconds)
+    setTimeout(() => {
+        closeModal();
+    }, 60000);
+}
+
+// Function to close the modal and go back to the main page
+function closeModal() {
+    document.getElementById('codeModal').style.display = 'none';
+}
+
+// Ensure modal is hidden on page load
+window.onload = function() {
+    closeModal(); // Ensure modal is hidden on page load
+};
