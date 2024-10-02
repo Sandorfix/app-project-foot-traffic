@@ -228,3 +228,26 @@ function closeModal() {
 window.onload = function() {
     closeModal(); // Ensure modal is hidden on page load
 };
+
+
+// EmailJS Script 
+(function() {
+    // Initialize EmailJS with your user ID
+    emailjs.init("YOUR_USER_ID");
+    
+    // Add event listener to the form
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        // Send the email using EmailJS
+        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+            .then(function() {
+                console.log('SUCCESS!');
+                alert('Thank you for your feedback!');
+                document.getElementById('contact-form').reset();
+            }, function(error) {
+                console.log('FAILED...', error);
+                alert('Failed to send the message. Please try again later.');
+            });
+    });
+})();

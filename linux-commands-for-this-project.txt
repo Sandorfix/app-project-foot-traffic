@@ -2,3 +2,5 @@
 
 sudo rsync -avz /var/www/html/ /home/pi3/app-project-foot-traffic/
 
+sudo chown www-data: && sudo chmod 664 
+

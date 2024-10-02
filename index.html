@@ -59,7 +59,7 @@
         </div>
     </section>
 
-    <!-- Carousel Section one -->
+    <!-- Carousel -->
     <section id="carousel" class="main style1">
         <div class="container">
             <div class="carousel">
@@ -81,7 +81,7 @@
         </div>
     </section>
 
-    <!-- Image Slider Section -->
+    <!-- Image Slider -->
     <section id="image-slider" class="main style1"><!-- Image Slider Section -->
         <div class="container">
             <div class="slider">
@@ -97,7 +97,7 @@
         </div>
     </section>
 
-    <!-- Two -->
+    <!-- Intoduction to our services -->
     <section id="two" class="main style2">
         <div class="container">
             <div class="row gtr-150">
@@ -161,7 +161,7 @@
     </section>
 
 
-    <!-- Testimonials -->
+    <!-- Testimonials Section-->
     <section id="three" class="main style1 special">
         <div class="container">
             <header class="major">
@@ -245,7 +245,7 @@
                 Visita il nostro negozio in Calle Quintana 7, Tenerife, Spagna
             </p>
 
-            <!-- Embeded Google Map -->
+            <!-- Embeded Google Map Section -->
             <div class="map-container">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.0746096228545!2d-16.5519092240496!3d28.417005493834523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc6a7f92e3054e99%3A0xa01e53a02624b6f3!2sC.%20Quintana%2C%207%2C%2038400%20Puerto%20de%20la%20Cruz%2C%20Santa%20Cruz%20de%20Tenerife!5e0!3m2!1sen!2ses!4v1726872309904!5m2!1sen!2ses"
@@ -256,7 +256,7 @@
         </div>
     </section>
 
-    <!-- Four -->
+    <!-- Email Section -->
     <section id="four" class="main style2 special">
         <div class="container">
             <header class="major">
@@ -274,14 +274,27 @@
                 you with the best experience possible. Whether you have suggestions, compliments, or concerns, please
                 take a moment to share your thoughts with us. Thank you for helping us serve you better!
             </p>
-            <ul class="actions special">
-                <li><a href="#" class="button wide primary" data-en="Send Us Your Feedback"
-                        data-es="Envíanos tus Comentarios" data-de="Senden Sie uns Ihr Feedback"
-                        data-fr="Envoyez-nous vos retours" data-it="Inviaci il tuo Feedback">Send Us Your Feedback</a>
-                </li>
-            </ul>
+            <form id="contact-form">
+                <div class="row gtr-uniform gtr-50">
+                    <div class="col-6 col-12-xsmall">
+                        <input type="text" name="name" id="name" placeholder="Name" required />
+                    </div>
+                    <div class="col-6 col-12-xsmall">
+                        <input type="email" name="email" id="email" placeholder="Email" required />
+                    </div>
+                    <div class="col-12">
+                        <textarea name="message" id="message" placeholder="Message" rows="6" required></textarea>
+                    </div>
+                    <div class="col-12">
+                        <ul class="actions special">
+                            <li><input type="submit" value="Send Feedback" class="primary" /></li>
+                        </ul>
+                    </div>
+                </div>
+            </form>
         </div>
     </section>
+
 
     <!-- Footer -->
     <section id="footer">
@@ -319,6 +332,10 @@
     </section>
 
 
+    <!-- EmailJS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
     <!-- Script -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
@@ -326,6 +343,8 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+
+
 
 </body>
 
