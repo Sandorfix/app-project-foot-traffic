@@ -3784,7 +3784,32 @@ a.button.scrolly {
 	display: block;
 }
 
+@media (max-width: 980px) {
+	.carousel-content{
+		display: none;
+	}
+}
 
+@media (min-width: 981px) {
+	.container-carousel {
+		background-color: #f9f9f9;
+		display: flex;
+		justify-content: space-evenly; 
+        width: 100%; 
+		gap: 2rem;
+	}
+	
+	.carousel {
+		display: flex;
+		justify-content: center;
+		width: 40%;
+	}
+
+	.carousel-content {
+		width: 50%;
+		padding: 0.5rem 1.5rem;
+	}
+}
 
 
 /* Default styles for all buttons */
@@ -3821,6 +3846,7 @@ a.button.scrolly {
 		display: flex;
 
 	}
+	
 }
 
 @media (min-width: 781px) and (max-width: 1400px) {
@@ -3852,52 +3878,6 @@ a.button.scrolly {
 		/* Adjust height for mobile */
 		min-height: 40px;
 		/* Set a minimum height */
-	}
-}
-
-
-#carousel {
-	display: none;
-}
-
-#image-slider {
-	width: 100%;
-	overflow: hidden;
-	position: relative;
-}
-
-.slider {
-	position: relative;
-	width: 100%;
-	height: 0;
-	padding-bottom: 56.25%;
-	/* 16:9 aspect ratio */
-}
-
-.slider img {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	opacity: 0;
-	transition: opacity 0.5s ease-in-out;
-	object-fit: fill;
-}
-
-.slider img.active {
-	opacity: 1;
-}
-
-
-/* Fallback for smaller screens */
-@media (max-width: 980px) {
-	#image-slider {
-		display: none;
-	}
-
-	#carousel {
-		display: block;
 	}
 }
 
