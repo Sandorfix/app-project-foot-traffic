@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <title data-en="Get Your Code" data-es="Obtén tu Código" data-de="Holen Sie sich Ihren Code"
-        data-fr="Obtenez Votre Code" data-it="Ottieni il tuo Codice">Get Your Code</title>
+    <title data-en="Maykel Jackson" data-es="Maykel Jackson" data-de="Maykel Jackson" data-fr="Maykel Jackson"
+        data-it="Maykel Jackson">Maykel Jackson</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -11,6 +11,9 @@
         <link rel="stylesheet" href="assets/css/noscript.css" />
     </noscript>
     <link rel="icon" href="/images/mj-favicon.webp" type="image/png">
+    <!-- EmailJS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="assets/js/main.js" defer></script> <!-- Use defer to ensure JS runs after HTML is loaded -->
 </head>
 
 <body class="is-preload">
@@ -59,32 +62,54 @@
         </div>
     </section>
 
-    <!-- Carousel -->
+    <!-- Carousel Section -->
     <section id="carousel" class="main style1 container-carousel">
-        
-            <div class="carousel">
-                <div class="slides">
-                    <img src="images/loro-siam.webp" alt="A vibrant display of exotic birds at Loro Siam">
-
-                    <img src="images/jet-ski.webp" alt="">
-                    <img src="images/quad.webp" alt="">
-                    <img src="images/catamaran-tour.webp" alt="Tourists enjoying a catamaran tour on clear blue waters">
-                    <img src="images/forest-hike.webp"
-                        alt="Hikers exploring a lush forest trail surrounded by greenery">
-                    <img src="images/bus-tour.webp"
-                        alt="A scenic view of a bus tour with travelers on a picturesque route">
-                    <img src="images/car-hire.webp" alt="">
-                </div>
-            
+        <div class="carousel">
+            <div class="slides">
+                <img src="images/loro-siam.webp" alt="A vibrant display of exotic birds at Loro Siam">
+                <img src="images/jet-ski.webp" alt="Thrilling jet ski adventure on crystal clear waters">
+                <img src="images/quad.webp" alt="Exciting quad bike tour through rugged island terrain">
+                <img src="images/catamaran-tour.webp"
+                    alt="Tourists enjoying a relaxing catamaran tour on clear blue waters">
+                <img src="images/forest-hike.webp"
+                    alt="Hikers exploring a lush tropical forest trail surrounded by greenery">
+                <img src="images/bus-tour.webp"
+                    alt="A scenic bus tour with travelers enjoying picturesque island views">
+                <img src="images/car-hire.webp" alt="Modern rental car ready for your personalized island exploration">
+            </div>
         </div>
 
-        <!-- Content container for heading and paragraph -->
+        <!-- Improved content container for heading and paragraph -->
         <div class="carousel-content">
-            <h2>Your Heading Here</h2>
-            <p>Your paragraph text goes here. You can describe the content of the carousel or provide more
-                information about the services offered.</p>
-        </div>
+            <h2 data-en="Amazing Deals and Surprises" data-es="Ofertas y Sorpresas Increíbles"
+                data-de="Fantastischen Angebote und Überraschungen" data-fr="Offres et Surprises Incroyables"
+                data-it="Offerte e Sorprese Straordinarie">
+                Amazing Deals and Surprises
+            </h2>
+            <p data-en="Unlock exclusive discounts and special offers on your Tenerife adventure. From discounted tour packages to free gifts with every purchase, explore the island while saving big! Whether you're seeking thrilling excursions or unique souvenirs, our deals guarantee a memorable trip without breaking the bank. Stay tuned for seasonal promotions and surprise gifts waiting just for you."
+                data-es="Descubre descuentos exclusivos y ofertas especiales en tu aventura por Tenerife. Desde paquetes turísticos con descuento hasta regalos gratis con cada compra, ¡explora la isla mientras ahorras! Ya sea que busques emocionantes excursiones o recuerdos únicos, nuestras ofertas garantizan un viaje inolvidable sin vaciarte los bolsillos. No te pierdas las promociones de temporada y las sorpresas que te esperan."
+                data-de="Nutzen Sie exklusive Rabatte und Sonderangebote für Ihr Abenteuer auf Teneriffa. Von ermäßigten Tourpaketen bis hin zu kostenlosen Geschenken bei jedem Einkauf – erkunden Sie die Insel und sparen Sie dabei! Ob Sie spannende Ausflüge oder einzigartige Souvenirs suchen, unsere Angebote garantieren eine unvergessliche Reise, ohne Ihr Budget zu sprengen. Halten Sie Ausschau nach saisonalen Aktionen und Überraschungsgeschenken, die nur auf Sie warten."
+                data-fr="Profitez de réductions exclusives et d'offres spéciales pour votre aventure à Tenerife. Des forfaits touristiques à prix réduits aux cadeaux gratuits avec chaque achat, explorez l'île tout en faisant des économies ! Que vous recherchiez des excursions palpitantes ou des souvenirs uniques, nos offres garantissent un voyage mémorable sans vous ruiner. Restez à l'affût des promotions saisonnières et des cadeaux surprises qui vous attendent."
+                data-it="Approfitta di sconti esclusivi e offerte speciali per la tua avventura a Tenerife. Dai pacchetti turistici scontati ai regali gratuiti con ogni acquisto, esplora l'isola risparmiando! Che tu sia in cerca di emozionanti escursioni o di souvenir unici, le nostre offerte garantiscono un viaggio indimenticabile senza svuotare il portafoglio. Non perdere le promozioni stagionali e le sorprese che ti aspettano.">
+                Unlock exclusive discounts and special offers on your Tenerife adventure. From discounted tour packages
+                to free gifts with every purchase, explore the island while saving big! Whether you're seeking thrilling
+                excursions or unique souvenirs, our deals guarantee a memorable trip without breaking the bank. Stay
+                tuned for seasonal promotions and surprise gifts waiting just for you.
+            </p>
 
+        </div>
+        <div class="marquee">
+            <span>
+                <p data-en="Amazing deals and gifts await on your Tenerife adventure! Get discounts on tours, free souvenirs with every purchase, and seasonal promotions. Explore and save now!"
+                    data-es="¡Ofertas increíbles y regalos te esperan en tu aventura por Tenerife! Obtén descuentos en tours, souvenirs gratis con cada compra y promociones de temporada. ¡Explora y ahorra ahora!"
+                    data-de="Erstaunliche Angebote und Geschenke warten auf Ihr Teneriffa-Abenteuer! Erhalten Sie Rabatte auf Touren, kostenlose Souvenirs bei jedem Kauf und saisonale Aktionen. Entdecken und sparen Sie jetzt!"
+                    data-fr="Des offres incroyables et des cadeaux vous attendent pour votre aventure à Tenerife ! Profitez de réductions sur les excursions, de souvenirs gratuits à chaque achat et de promotions saisonnières. Explorez et économisez maintenant!"
+                    data-it="Offerte incredibili e regali ti aspettano nella tua avventura a Tenerife! Ottieni sconti sui tour, souvenir gratuiti con ogni acquisto e promozioni stagionali. Esplora e risparmia ora!">
+                    Amazing deals and gifts await on your Tenerife adventure! Get discounts on tours, free souvenirs
+                    with every purchase, and seasonal promotions. Explore and save now!
+                </p>
+            </span>
+        </div>
     </section>
 
     <!-- Intoduction to our services -->
@@ -109,42 +134,41 @@
 
                 </div>
                 <div class="col-6 col-12-medium">
-                    <header class="major">
-                        <h2 data-en="Explore Our Exciting Tours!&lt;br /&gt; Choose Your Adventure"
-                            data-es="¡Explora Nuestras Emocionantes Excursiones!&lt;br /&gt; Elige Tu Aventura"
-                            data-de="Entdecken Sie unsere aufregenden Touren!&lt;br /&gt; Wählen Sie Ihr Abenteuer"
-                            data-fr="Explorez Nos Excursions Passionnantes !&lt;br /&gt; Choisissez Votre Aventure"
-                            data-it="Esplora i Nostri Tour Entusiasmanti!&lt;br /&gt;Scegli la Tua Avventura">
-                            Explore Our Exciting Tours!&lt;br /&gt;Choose Your Adventure
-                        </h2>
+                    <h2 data-en="Adventure Awaits in Tenerife" data-es="La Aventura te Espera en Tenerife"
+                        data-de="Abenteuer Erwartet Sie auf Teneriffa" data-fr="L'Aventure Vous Attend à Tenerife"
+                        data-it="L'Avventura ti Aspetta a Tenerife">
+                        Adventure Awaits in Tenerife
+                    </h2>
+                    <p data-en="Embark on thrilling journeys across Tenerife. Whether it's water sports, hiking trails, or wildlife encounters, our island offers adventures for every taste. Explore crystal-clear waters with snorkeling and scuba diving, or challenge the waves with surfing and windsurfing."
+                        data-es="Embárcate en emocionantes viajes por Tenerife. Ya sean deportes acuáticos, senderos de senderismo o encuentros con la vida silvestre, nuestra isla ofrece aventuras para todos los gustos. Explora aguas cristalinas con esnórquel y buceo, o desafía las olas con surf y windsurf."
+                        data-de="Begeben Sie sich auf aufregende Reisen durch Teneriffa. Ob Wassersport, Wanderwege oder Begegnungen mit der Tierwelt, unsere Insel bietet Abenteuer für jeden Geschmack. Erkunden Sie kristallklares Wasser beim Schnorcheln und Tauchen oder stellen Sie sich den Wellen beim Surfen und Windsurfen."
+                        data-fr="Embarquez pour des voyages palpitants à travers Tenerife. Que ce soit pour les sports nautiques, les sentiers de randonnée ou les rencontres avec la faune, notre île offre des aventures pour tous les goûts. Explorez des eaux cristallines en faisant du snorkeling ou de la plongée, ou affrontez les vagues en surfant et en faisant de la planche à voile."
+                        data-it="Intraprendi emozionanti viaggi attraverso Tenerife. Che si tratti di sport acquatici, sentieri escursionistici o incontri con la fauna selvatica, la nostra isola offre avventure per tutti i gusti. Esplora acque cristalline con snorkeling e immersioni subacquee, oppure sfida le onde con il surf e il windsurf.">
+                        Embark on thrilling journeys across Tenerife. Whether it's water sports, hiking trails, or
+                        wildlife encounters, our island offers adventures for every taste. Explore crystal-clear waters
+                        with snorkeling and scuba diving, or challenge the waves with surfing and windsurfing.
+                    </p>
 
-                    </header>
-                    <p data-en="Discover a variety of tours designed to cater to every traveler’s interests. From breathtaking scenic excursions to thrilling adventures, we have something for everyone."
-                        data-es="Descubre una variedad de excursiones diseñadas para satisfacer los intereses de cada viajero. Desde impresionantes excursiones escénicas hasta emocionantes aventuras, tenemos algo para todos."
-                        data-de="Entdecken Sie eine Vielzahl von Touren, die auf die Interessen jedes Reisenden abgestimmt sind. Von atemberaubenden Landschaftstouren bis hin zu spannenden Abenteuern haben wir für jeden etwas."
-                        data-fr="Découvrez une variété d'excursions conçues pour répondre aux intérêts de chaque voyageur. Des excursions panoramiques à couper le souffle aux aventures palpitantes, nous avons quelque chose pour tout le monde."
-                        data-it="Scopri una varietà di tour progettati per soddisfare gli interessi di ogni viaggiatore. Dalle escursioni panoramiche mozzafiato alle avventure emozionanti, abbiamo qualcosa per tutti.">
-                        Discover a variety of tours designed to cater to every traveler’s interests. From breathtaking
-                        scenic excursions to thrilling adventures, we have something for everyone.
+                    <p data-en="If you prefer land adventures, hike through ancient forests or up volcanic peaks for breathtaking views. For wildlife enthusiasts, observe dolphins and whales in their natural habitat or visit the island's unique nature reserves."
+                        data-es="Si prefieres las aventuras en tierra, recorre antiguos bosques o sube picos volcánicos para obtener vistas impresionantes. Para los amantes de la fauna, observa delfines y ballenas en su hábitat natural o visita las reservas naturales únicas de la isla."
+                        data-de="Wenn Sie lieber an Land unterwegs sind, wandern Sie durch uralte Wälder oder besteigen Sie vulkanische Gipfel für atemberaubende Ausblicke. Für Tierliebhaber gibt es Delfin- und Walbeobachtungen in freier Wildbahn oder Besuche in einzigartigen Naturschutzgebieten der Insel."
+                        data-fr="Si vous préférez les aventures terrestres, parcourez des forêts anciennes ou grimpez des sommets volcaniques pour des vues à couper le souffle. Pour les passionnés de la faune, observez les dauphins et les baleines dans leur habitat naturel ou visitez les réserves naturelles uniques de l'île."
+                        data-it="Se preferisci avventure terrestri, percorri antiche foreste o sali su cime vulcaniche per viste mozzafiato. Per gli amanti della fauna, osserva delfini e balene nel loro habitat naturale o visita le riserve naturali uniche dell'isola.">
+                        If you prefer land adventures, hike through ancient forests or up volcanic peaks for
+                        breathtaking views. For wildlife enthusiasts, observe dolphins and whales in their natural
+                        habitat or visit the island's unique nature reserves.
                     </p>
-                    <p data-en="Each tour offers a unique experience, showcasing the beauty and culture of our stunning location. Whether you’re looking for a relaxing day trip or an action-packed adventure, our knowledgeable guides are here to ensure you have a memorable experience."
-                        data-es="Cada excursión ofrece una experiencia única, mostrando la belleza y la cultura de nuestra impresionante ubicación. Ya sea que busques una excursión relajante o una aventura llena de acción, nuestros guías expertos están aquí para garantizar que tengas una experiencia memorable."
-                        data-de="Jede Tour bietet ein einzigartiges Erlebnis, das die Schönheit und Kultur unseres atemberaubenden Standorts zeigt. Egal, ob Sie einen entspannten Tagesausflug oder ein actiongeladenes Abenteuer suchen, unsere sachkundigen Führer sind hier, um sicherzustellen, dass Sie ein unvergessliches Erlebnis haben."
-                        data-fr="Chaque excursion offre une expérience unique, mettant en valeur la beauté et la culture de notre magnifique emplacement. Que vous recherchiez une excursion d'une journée relaxante ou une aventure palpitante, nos guides expérimentés sont là pour s'assurer que vous avez une expérience mémorable."
-                        data-it="Ogni tour offre un'esperienza unica, che mette in risalto la bellezza e la cultura della nostra splendida località. Che tu stia cercando un'escursione rilassante o un'avventura ricca di azione, le nostre guide esperte sono qui per garantirti un'esperienza memorabile.">
-                        Each tour offers a unique experience, showcasing the beauty and culture of our stunning
-                        location. Whether you’re looking for a relaxing day trip or an action-packed adventure, our
-                        knowledgeable guides are here to ensure you have a memorable experience.
+
+                    <p data-en="No matter your passion, Tenerife promises unforgettable experiences. Start your Tenerife story today!"
+                        data-es="No importa tu pasión, Tenerife promete experiencias inolvidables. ¡Comienza tu historia en Tenerife hoy!"
+                        data-de="Egal, wo Ihre Leidenschaft liegt, Teneriffa verspricht unvergessliche Erlebnisse. Beginnen Sie noch heute Ihre Teneriffa-Geschichte!"
+                        data-fr="Quelle que soit votre passion, Tenerife promet des expériences inoubliables. Commencez votre histoire à Tenerife dès aujourd'hui !"
+                        data-it="Qualunque sia la tua passione, Tenerife promette esperienze indimenticabili. Inizia oggi la tua storia a Tenerife!">
+                        No matter your passion, Tenerife promises unforgettable experiences. Start your Tenerife story
+                        today!
                     </p>
-                    <p data-en="Learn more about our services, including customizable packages and exclusive deals, to make your journey even more special. Our commitment to customer satisfaction means we’re dedicated to providing you with the best tours available."
-                        data-es="Descubre más sobre nuestros servicios, incluidos paquetes personalizables y ofertas exclusivas, para hacer que tu viaje sea aún más especial. Nuestro compromiso con la satisfacción del cliente significa que estamos dedicados a brindarte las mejores excursiones disponibles."
-                        data-de="Erfahren Sie mehr über unsere Dienstleistungen, einschließlich anpassbarer Pakete und exklusiver Angebote, um Ihre Reise noch spezieller zu machen. Unser Engagement für die Kundenzufriedenheit bedeutet, dass wir uns darauf konzentrieren, Ihnen die besten Touren anzubieten."
-                        data-fr="Découvrez-en plus sur nos services, y compris des forfaits personnalisables et des offres exclusives, pour rendre votre voyage encore plus spécial. Notre engagement envers la satisfaction client signifie que nous nous consacrons à vous fournir les meilleures excursions disponibles."
-                        data-it="Scopri di più sui nostri servizi, inclusi pacchetti personalizzabili e offerte esclusive, per rendere il tuo viaggio ancora più speciale. Il nostro impegno per la soddisfazione del cliente significa che siamo dedicati a offrirti i migliori tour disponibili.">
-                        Learn more about our services, including customizable packages and exclusive deals, to make your
-                        journey even more special. Our commitment to customer satisfaction means we’re dedicated to
-                        providing you with the best tours available.
-                    </p>
+
+
                 </div>
             </div>
         </div>
@@ -294,8 +318,8 @@
         </ul>
 
         <ul class="copyright">
-            <li data-en="&#169; Foot-Traffic-App" data-es="&#169; Foot-Traffic-App" data-de="&#169; Foot-Traffic-App"
-                data-fr="&#169; Foot-Traffic-App">&#169; Foot-Traffic-App</li>
+            <li data-en="&#169; Tickets and Tours" data-es="&#169; Tickets and Tours" data-de="&#169; Tickets and Tours"
+                data-fr="&#169; Tickets and Tours">&#169; Tickets and Tours</li>
             <li data-en="&lt;span&gt;HTML5UP&lt;/span&gt; - Licensed under &lt;span&gt;CC BY 3.0&lt;/span&gt;"
                 data-es="&lt;span&gt;HTML5UP&lt;/span&gt; - Licencia bajo &lt;span&gt;CC BY 3.0&lt;/span&gt;"
                 data-de="&lt;span&gt;HTML5UP&lt;/span&gt; - Lizenziert unter &lt;span&gt;CC BY 3.0&lt;/span&gt;"
@@ -329,11 +353,6 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
-
-    <!-- EmailJS Script -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script src="assets/js/main.js"></script>
-
 
 
 

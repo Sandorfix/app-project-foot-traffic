@@ -230,24 +230,24 @@ window.onload = function() {
 };
 
 
-// EmailJS Script 
+// Initialize EmailJS
 (function() {
-    // Initialize EmailJS with your user ID
-    emailjs.init("YOUR_USER_ID");
-    
-    // Add event listener to the form
+    // Initialize EmailJS with your public key
+    emailjs.init("ZIwDQ1nnE0mh_XGLl"); // Replace with your public key
+})();
+
+window.onload = function() {
     document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault();
+        event.preventDefault(); // Prevent default form submission
         
-        // Send the email using EmailJS
-        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
-            .then(function() {
-                console.log('SUCCESS!');
-                alert('Thank you for your feedback!');
-                document.getElementById('contact-form').reset();
-            }, function(error) {
-                console.log('FAILED...', error);
-                alert('Failed to send the message. Please try again later.');
+        // Send form data using EmailJS
+        emailjs.sendForm('service_i84ghgi', 'template_ymava9c', this)
+            .then(() => {
+                alert('Feedback sent successfully!'); // Notify success
+                document.getElementById('contact-form').reset(); // Reset form
+            }, (error) => {
+                alert('Failed to send feedback. Please try again later.'); // Notify failure
+                console.error('FAILED...', error); // Log error for debugging
             });
     });
-})();
+}
