@@ -1,6 +1,6 @@
-***This will sync files from /var/www/html/ to /home/pi3/app-project-foot-trafic/, while excluding the .git directory***
-
-sudo rsync -avz /var/www/html/ /home/pi3/app-project-foot-traffic/
+***Working in my main PC***
 
 sudo chown www-data: && sudo chmod 664 
+
+
 
