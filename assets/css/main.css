@@ -3673,8 +3673,25 @@ body.is-preload #header:after {
 }
 
 
-/* This make headers buttons the same style */
+/* ------------------ From here down below are my added styles------------------*/
 
+/* Header font-family new styles */
+#header-title {
+    font-family: 'Lobster Two', cursive, sans-serif; /* Use Lobster Two font */
+    font-weight: 400; /* Not strictly necessary, but good for consistency */
+    font-size: 2em; /* Use relative sizes for responsiveness */
+    margin: 0; /* Reset margins if needed */
+}
+
+#header-description {
+    font-family: 'Lobster Two', cursive, sans-serif; /* Consistent font */
+    font-weight: 400; /* Not strictly necessary, but good for consistency */
+    font-size: 1.5em; /* Use relative sizes for responsiveness */
+    margin: 0; /* Reset margins if needed */
+}
+
+
+/* This make headers buttons the same style */
 #header .actions {
 	display: flex;
 	align-items: flex-end;
@@ -3763,16 +3780,27 @@ a.button.scrolly {
 	filter: drop-shadow(0 0 3px rgba(255, 165, 0, 0.3));
 }
 
-
 /* Carousel Section */
+.container-carousel {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 400px; /* Adjust this value based on your needs */
+}
+
 .carousel {
-	position: relative;
-	max-width: 100%;
-	margin: auto 0 30px;
-	overflow: hidden;
-	border: 1px solid #e0e0e0;
-	border-radius: 8px;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
 }
 
 .carousel-content h2 {
@@ -3783,7 +3811,6 @@ a.button.scrolly {
     padding-bottom: 0.5rem;
 }
 
-/* Paragraph styles */
 .carousel-content p {
     color: #555;
     line-height: 1.6;
@@ -3791,81 +3818,90 @@ a.button.scrolly {
 }
 
 .slides {
-	display: flex;
-	transition: transform 0.5s ease;
+    display: flex;
+    transition: transform 0.5s ease;
 }
 
 .slides img {
-	max-width: 100%;
-	min-width: 100%;
-	height: auto;
-	display: block;
+    max-width: 100%;
+    min-width: 100%;
+    height: auto;
+    display: block;
 }
 
-/* Marquee for screens under 981px */
+/* Marquee styles */
 .marquee {
-	display: none; /* Hide by default */
-	width: 100%; /* Full width */
-	overflow: hidden; /* Hide overflow */
-	white-space: nowrap; /* Prevent text wrapping */
-	box-sizing: border-box; /* Ensure width calculations include padding */
-  }
-  
-  .marquee span {
-	color: #3b7dc4;
-	font-weight: 500;
-	font-size: x-large;
-	display: inline-block;
-	padding-left: 100%; /* Start off-screen */
-	margin-top: 15px;
-	animation: scroll 20s linear infinite; /* Scrolling animation */
-  }
-  
-  @keyframes scroll {
-	0% {
-	  transform: translateX(0); /* Start at the normal position */
-	}
-	100% {
-	  transform: translateX(-100%); /* Move to the left out of view */
-	}
-  }
-
-@media (max-width: 980px) {
-	.carousel-content{
-		display: none;
-	}
-	.marquee {
-		display: block; /* Show on smaller screens */
-	  }
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    margin-top: 1rem;
 }
 
-@media (min-width: 720px) and (max-width: 980px) {
-	.marquee span {
-	  font-size: xx-large; /* Adjust to your preferred size */
-	}
-  }
-
-@media (min-width: 981px) {
-	.container-carousel {
-		background-color: #f9f9f9;
-		display: flex;
-		justify-content: space-evenly; 
-        width: 100%; 
-		gap: 2rem;
-	}
-	
-	.carousel {
-		display: flex;
-		justify-content: center;
-		width: 40%;
-	}
-
-	.carousel-content {
-		width: 50%;
-		padding: 0.5rem 1.5rem;
-	}
+.marquee span {
+    color: #37443e;
+    font-weight: 500;
+    font-size: x-large;
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll 20s linear infinite;	
+	margin: 1rem 0;
 }
 
+.marquee p {
+    margin: 5px 0; /* Set the top and bottom margin to 5px, adjust as needed */
+    line-height: 1.5; /* Adjust line-height for better spacing if needed */
+	text-align: center;
+}
+
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Responsive layout */
+@media (max-width: 720px) {
+    .carousel-content {
+        display: none;
+    }
+    
+    .marquee {
+        display: block;
+    }
+}
+
+@media (min-width: 721px) {
+    .container-carousel {
+        background-color: #f9f9f9;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    .carousel {
+        width: calc(50% - 1rem);
+        margin: 0;
+    }
+
+    .carousel-content {
+        display: block;
+        width: calc(50% - 1rem);
+        padding: 0;
+    }
+    
+    .marquee {
+        display: none;
+    }
+}
+
+@media (min-width: 721px) and (max-width: 980px) {
+    .marquee span {
+        font-size: xx-large;
+    }
+}
 
 /* Default styles for all buttons */
 a.button.scrolly {
@@ -4196,6 +4232,9 @@ body {
 	font-weight: 400;
 	line-height: 1.5;
 }
+
+
+
 
 
 
