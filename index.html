@@ -65,6 +65,11 @@
                         data-de="Entdecken" data-fr="Découvrir" data-it="Scoprire">Discover</a></li>
             </ul>
         </div>
+        <div class="floating-btn-container">
+            <button id="generateCodeBtn" class="floating-btn" onclick="generateCode()">
+                <img src="/images/giftbox.webp" alt="Generate Code">
+            </button>
+        </div>
     </section>
 
     <!-- Carousel Section -->
@@ -338,9 +343,11 @@
 
 
         <!-- Floating button -->
-        <button id="generateCodeBtn" class="floating-btn" onclick="generateCode()">
-            <img src="/images/giftbox.webp" alt="Generate Code">
-        </button>
+        <div class="floating-btn-container">
+            <button id="generateCodeBtn" class="floating-btn" onclick="generateCode()">
+                <img src="/images/giftbox.webp" alt="Generate Code">
+            </button>
+        </div>
 
         <!-- Code modal -->
         <div id="codeModal">
@@ -349,7 +356,7 @@
             <span class="close-btn" onclick="closeModal()">
                 <i class="fas fa-times"></i>
             </span>
-            
+
         </div>
 
 
