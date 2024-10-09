@@ -5,7 +5,7 @@
 */
 
 // Store the selected language globally
-let selectedLanguage = 'en'; // Default language
+let selectedLanguage = localStorage.getItem('selectedLanguage') || 'en'; // Default language
 
 // Function to change the language
 function changeLanguage() {
@@ -64,7 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
     updateContent(savedLanguage); // Initialize content based on saved language
     updateLanguageLabel(savedLanguage); // Initialize label based on saved language
 });
-
 
 // Original Photon script
 (function ($) {
@@ -225,10 +224,9 @@ function closeModal() {
 }
 
 // Ensure modal is hidden on page load
-window.onload = function() {
+document.addEventListener('DOMContentLoaded', () => {
     closeModal(); // Ensure modal is hidden on page load
-};
-
+});
 
 // Initialize EmailJS
 (function() {
@@ -236,18 +234,51 @@ window.onload = function() {
     emailjs.init("ZIwDQ1nnE0mh_XGLl"); // Replace with your public key
 })();
 
-window.onload = function() {
+document.addEventListener('DOMContentLoaded', () => {
+    const messages = {
+        en: {
+            success: 'Feedback sent successfully!',
+            failure: 'Failed to send feedback. Please try again later.',
+            screenshot: 'Please take a screenshot of this code.'
+        },
+        es: {
+            success: '¡Comentarios enviados con éxito!',
+            failure: 'No se pudo enviar los comentarios. Por favor, inténtelo de nuevo más tarde.',
+            screenshot: 'Por favor, toma una captura de pantalla de este código.'
+        },
+        de: {
+            success: 'Feedback erfolgreich gesendet!',
+            failure: 'Feedback konnte nicht gesendet werden. Bitte versuchen Sie es später erneut.',
+            screenshot: 'Bitte machen Sie einen Screenshot dieses Codes.'
+        },
+        fr: {
+            success: 'Retour envoyé avec succès!',
+            failure: 'Échec de l\'envoi des commentaires. Veuillez réessayer plus tard.',
+            screenshot: 'Veuillez prendre une capture d\'écran de ce code.'
+        },
+        it: {
+            success: 'Feedback inviato con successo!',
+            failure: 'Invio del feedback non riuscito. Per favore riprova più tardi.',
+            screenshot: 'Per favore, fai uno screenshot di questo codice.'
+        }
+    };
+
     document.getElementById('contact-form').addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent default form submission
-        
+
+        const userLang = selectedLanguage;
+        console.log('User language:', userLang); // Debugging line
+        const userMessages = messages[userLang] || messages['en']; // Default to English if language not found
+        console.log('User messages:', userMessages); // Debugging line
+
         // Send form data using EmailJS
         emailjs.sendForm('service_i84ghgi', 'template_ymava9c', this)
             .then(() => {
-                alert('Feedback sent successfully!'); // Notify success
+                alert(userMessages.success); // Notify success
                 document.getElementById('contact-form').reset(); // Reset form
             }, (error) => {
-                alert('Failed to send feedback. Please try again later.'); // Notify failure
+                alert(userMessages.failure); // Notify failure
                 console.error('FAILED...', error); // Log error for debugging
             });
     });
-}
+});
