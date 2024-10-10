@@ -21,10 +21,12 @@ function updateContent(language) {
     // Update all elements with data-* attributes
     document.querySelectorAll('[data-' + language + ']').forEach(element => {
         const key = 'data-' + language;
-        if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-            element.placeholder = element.getAttribute(key);
+        if (element.tagName === 'INPUT' && element.type === 'submit') {
+            element.value = element.getAttribute(key); // Update button text
+        } else if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+            element.placeholder = element.getAttribute(key); // Update placeholders
         } else {
-            element.innerHTML = element.getAttribute(key);
+            element.innerHTML = element.getAttribute(key); // Update innerHTML
         }
     });
 
